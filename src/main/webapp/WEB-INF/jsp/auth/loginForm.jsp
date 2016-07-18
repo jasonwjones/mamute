@@ -8,6 +8,11 @@
 
 <h2 class="title page-title subheader">Login</h2>
 
+<p>
+	<c:set var="linkToPrivacyPolicy" value="${linkTo[SignupController].privacyPolicy}"/>
+	${t['privacy_policy.acceptance.content'].args(linkToPrivacyPolicy)} 
+</p>
+
 <div class="login-or-signup">
 	<div class="login">
 		<tags:loginForm redirectUrl="${redirectUrl}"/>
